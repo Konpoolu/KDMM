@@ -1,6 +1,6 @@
 import argparse, sys
 from MISC import list
-from Calculators import calc_sci, large_calc
+from Calculators import calc_sci, large_calc, hypot_calc
 from Converters import length_convert
 
 APPS = {
@@ -9,7 +9,7 @@ APPS = {
     "list": list.run,
 
     # Everything in the Calculators folder
-    "calc-sci": calc_sci.run,
+    "hypot-calc": hypot_calc.run, 
 
     # Everything in the Converters folder
     "length-convert": length_convert.run

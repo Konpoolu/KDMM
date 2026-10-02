@@ -1,6 +1,5 @@
 def run() -> int:
     print("The funtions avilable are:")
-    print("calc-sci - Enters a scientific calculator.")
-    print("convert - Enters a sub-program where you can convert from one unit to another.")
-    print("large-calc - Enters a large numbers calculator.")
+    print("length-convert - Allows you to convert from one unit to another")
+    print("hypot-calc - Calculates the hypotenuse of a right triangle from two given legs")
     return 0

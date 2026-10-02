@@ -5,7 +5,7 @@ def numIn() -> float:
     while True:
         try:
             return float(input())
-        except ValError:
+        except ValueError:
             print("Invalid Input")
 
 def unitIn() -> int:
@@ -17,17 +17,6 @@ def unitIn() -> int:
 
 def unitConvert(unitInit: int, unitDes: int, value: float) -> float:
     return value * CONST[unitInit] / CONST[unitDes]
-
-    # list of compatible units:
-    # millimeter
-    # meter
-    # centimeter
-    # kilometer
-    # inch
-    # foot
-    # yard
-    # mile
-    # Convert whatever the user inputed to a meter, then convert to the desired unit
 
 def run() -> int:
     print("Current unit:")
