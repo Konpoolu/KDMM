@@ -12,27 +12,32 @@ def numIn() -> float:
             return float(s)
         except ValueError:
             print("Invalid Input")
+    
 
-def hypot() -> float:
+def mLeg() -> float:
     while True:
-        print("Leg One:")
-        legOne = numIn()
-        print("Leg Two:")
-        legTwo = numIn()
-       
-        if legOne <= 0 or legTwo <= 0:
+        print("Hypotenuse:")
+        hypot = numIn()
+        print("Given Leg:")
+        givenLeg = numIn()
+        
+        if hypot <= 0 or givenLeg <= 0:
             print("Side(s) must be positive")
             continue
 
-        legOneSq = legOne ** 2
-        legTwoSq = legTwo ** 2
+        hypotSq = hypot ** 2
+        legSq = givenLeg ** 2
 
-        legFinal = math.sqrt(legOneSq + legTwoSq) 
-        return legFinal
+        if ((hypotSq-legSq)>0):
+            legFinal = math.sqrt(hypotSq - legSq)
+            return legFinal
+        else:
+            print("Hypotenuse does not exist for given triangle")
+
 
 def run() -> int:
     try:
-        print(hypot())
+        print(mLeg())
     except QuitRequested:
         return 0
     return 0
