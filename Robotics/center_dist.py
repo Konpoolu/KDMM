@@ -14,7 +14,7 @@ def numIn() -> int:
             print("Invalid Input")
 
 def belt() -> float:
-    print("Belt Pitch (in millimeters):")
+    print("Belt Pitch:")
     beltP = numIn()
     print("Belt Teeth:")
     beltT = numIn()
