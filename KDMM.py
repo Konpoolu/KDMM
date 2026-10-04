@@ -1,7 +1,7 @@
 import argparse, sys
 from MISC import list
 from Calculators import calc_sci, large_calc, hypot_calc, mLeg_calc
-from Converters import length_convert
+from Converters import length_convert, weight_convert
 
 APPS = {
     # comma, then next thing, then colon, then file name dot run
@@ -13,7 +13,8 @@ APPS = {
     "mLeg-calc": mLeg_calc.run,
 
     # Everything in the Converters folder
-    "length-convert": length_convert.run
+    "length-convert": length_convert.run,
+    "weight-convert": weight_convert.run
 }
 
 def main() -> int:

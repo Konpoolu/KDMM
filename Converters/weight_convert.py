@@ -1,5 +1,14 @@
-UNITS = {"mm": 1, "cm": 2, "m": 3, "km": 4, "in": 5, "ft": 6, "yd": 7, "mi": 8}
-CONST = {1: 0.001, 2: 0.01, 3: 1.0, 4: 1000.0, 5: 0.0254, 6: 0.3048, 7: 0.9144, 8: 1609.344}
+UNITS = {"mg": 1, "g": 2, "kg": 3, "metricton": 4, "oz": 5, "lb": 6, "uston": 7}
+CONST = {1: 0.001, 2: 1, 3: 1000, 4: 1000000, 5: 28.349523125, 6: 453.59237, 7: 907184.74}
+
+# Supported Units
+    # MilliGrams
+    # Grams
+    # Kilograms
+    # Metric Tons
+    # Ounces
+    # Pounds
+    # US Ton
 
 class QuitRequested(Exception):
     pass
@@ -16,12 +25,13 @@ def numIn() -> float:
 
 def unitIn() -> int:
     while True:
-        unit = input().strip().lower()
+        unit = input().strip("s ").lower()
         if unit == "quit":
             raise QuitRequested
         if unit in UNITS:
             return UNITS[unit]
         print("Invalid Input")
+
 
 def unitConvert(unitInit: int, unitDes: int, value: float) -> float:
     return value * CONST[unitInit] / CONST[unitDes]
