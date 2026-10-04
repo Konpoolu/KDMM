@@ -10,5 +10,6 @@ def run() -> int:
     print("weight-convert - Allows you to convert from one unit of weight to another.")
     print("hypot-calc - Calculates the hypotenuse of a right triangle from two given legs.")
     print("mleg-calc - Calculates the missing leg of a right triangle using the hypotenuse and the given leg.")
+    print("center-dist - Calculates the center distance of a pulley system.")
     print()
     return 0
