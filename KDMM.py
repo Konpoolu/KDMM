@@ -2,7 +2,7 @@ import argparse, sys
 from MISC import list
 from Calculators import calc_sci, large_calc, hypot_calc, mLeg_calc
 from Converters import length_convert, weight_convert
-from Robotics import center_dist
+from Robotics import center_dist, subdivision
 
 APPS = {
     # comma, then next thing, then colon, then file name dot run
@@ -18,7 +18,8 @@ APPS = {
     "weight-convert": weight_convert.run,
 
     # Everything in the Robotics folder
-    "center-dist": center_dist.run
+    "center-dist": center_dist.run,
+    "subdivision": subdivision.run
 }
 
 def main() -> int:
