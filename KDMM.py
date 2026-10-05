@@ -1,7 +1,7 @@
 import argparse, sys
-from MISC import list
+from Misc import list
 from Calculators import calc_sci, large_calc, hypot_calc, mLeg_calc
-from Converters import length_convert, weight_convert
+from Converters import length_convert, weight_convert, area_convert
 from Robotics import center_dist, subdivision
 
 APPS = {
@@ -16,6 +16,7 @@ APPS = {
     # Everything in the Converters folder
     "length-convert": length_convert.run,
     "weight-convert": weight_convert.run,
+    "area-convert": area_convert.run,
 
     # Everything in the Robotics folder
     "center-dist": center_dist.run,
